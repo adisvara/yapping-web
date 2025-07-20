@@ -60,7 +60,7 @@ export const Messages: React.FC = () => {
             return;
         }
 
-        const ws = new WebSocket('ws://localhost:8080');
+        const ws = new WebSocket(import.meta.env.VITE_WS_URL);
         wsRef.current = ws;
 
         ws.onopen = (): void => {
