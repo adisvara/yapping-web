@@ -143,8 +143,8 @@ export const Messages: React.FC = () => {
         <div className="flex flex-col h-screen p-4">
             <header className="flex justify-between items-center mb-4">
                 <div>
-                    <h1 className="text-xl font-bold">{roomName}</h1>
-                    <div className="flex items-center text-sm text-muted-foreground">
+                    <h1 className="text-xl text-[#FFFFFF] font-bold">{roomName}</h1>
+                    <div className="flex items-center text-sm text-purple-500">
                         <span className={`relative flex h-2 w-2 mr-2`}>
                             <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${isConnected ? 'bg-green-400' : 'bg-red-400'} opacity-75`}></span>
                             <span className={`relative inline-flex rounded-full h-2 w-2 ${isConnected ? 'bg-green-500' : 'bg-red-500'}`}></span>
@@ -187,7 +187,7 @@ export const Messages: React.FC = () => {
                     placeholder="Type a message..."
                     disabled={!isConnected}
                 />
-                <Button onClick={sendMessage} disabled={!isConnected || !inputMessage.trim()}>Send</Button>
+                <Button onClick={sendMessage} variant="outline" disabled={!isConnected || !inputMessage.trim()}>Send</Button>
             </footer>
         </div>
     );

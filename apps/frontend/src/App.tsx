@@ -7,7 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 function App() {
   return (
     <>
-      <div className='bg-cyan-700 min-h-screen flex justify-center items-center'>
+      <div className='bg-[#13151A] min-h-screen flex justify-center items-center'>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Join/>}/>
